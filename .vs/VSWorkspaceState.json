@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\Dish_Discovery",
-    "\\Dish_Discovery\\Models"
+    "\\Dish_Discovery\\Models",
+    "\\Dish_Discovery\\Views",
+    "\\Dish_Discovery\\Views\\Home"
   ],
-  "SelectedNode": "\\Dish_Discovery\\Models\\ErrorViewModel.cs",
+  "SelectedNode": "\\Dish_Discovery\\Views\\Home\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }
