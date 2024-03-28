@@ -2,10 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\Dish_Discovery",
-    "\\Dish_Discovery\\Models",
+    "\\Dish_Discovery.ByHandData",
+    "\\Dish_Discovery.Data",
     "\\Dish_Discovery\\Views",
-    "\\Dish_Discovery\\Views\\Home"
+    "\\Dish_Discovery\\Views\\Home",
+    "\\Dish_MVC"
   ],
-  "SelectedNode": "\\Dish_Discovery\\Views\\Home\\Index.cshtml",
+  "SelectedNode": "\\Dish_Discovery\\Dish_Discovery.sln",
   "PreviewInSolutionExplorer": false
 }

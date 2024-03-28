@@ -3,23 +3,49 @@
     ViewData["Title"] = "Error";
 }
 
-<h1 class="text-danger">Error.</h1>
-<h2 class="text-danger">An error occurred while processing your request.</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Madimi One', sans-serif;
+            background-image: url('https://media.istockphoto.com/id/469839680/vector/vintage-kitchen-tools-pattern.jpg?s=612x612&w=0&k=20&c=fBsq3rbVLT89w6Vr8AI79D9n_hBOFjb-DjLscuSZAlU=');
+            background-size: auto;
+            background-repeat: repeat;
+            background-attachment: fixed;
+        }
 
-@if (Model.ShowRequestId)
-{
+        .text-danger {
+            color: #dc3545; /* Bootstrap's text-danger color */
+        }
+    </style>
+</head>
+<body>
+    <h1 class="text-danger">Error.</h1>
+    <h2 class="text-danger">An error occurred while processing your request.</h2>
+
+    @if (Model.ShowRequestId)
+    {
+        <p>
+            <strong>Request ID:</strong> <code>@Model.RequestId</code>
+        </p>
+    }
+
+    <h3>Development Mode</h3>
     <p>
-        <strong>Request ID:</strong> <code>@Model.RequestId</code>
+        Swapping to <strong>Development</strong> environment will display more detailed information about the error that occurred.
     </p>
-}
-
-<h3>Development Mode</h3>
-<p>
-    Swapping to <strong>Development</strong> environment will display more detailed information about the error that occurred.
-</p>
-<p>
-    <strong>The Development environment shouldn't be enabled for deployed applications.</strong>
-    It can result in displaying sensitive information from exceptions to end users.
-    For local debugging, enable the <strong>Development</strong> environment by setting the <strong>ASPNETCORE_ENVIRONMENT</strong> environment variable to <strong>Development</strong>
-    and restarting the app.
-</p>
+    <p>
+        <strong>The Development environment shouldn't be enabled for deployed applications.</strong>
+        It can result in displaying sensitive information from exceptions to end users.
+        For local debugging, enable the <strong>Development</strong> environment by setting the <strong>ASPNETCORE_ENVIRONMENT</strong> environment variable to <strong>Development</strong>
+        and restarting the app.
+    </p>
+</body>
+</html>

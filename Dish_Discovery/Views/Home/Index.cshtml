@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home Page🍝";
 }
 
 <!DOCTYPE html>
@@ -13,6 +13,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="~/css//site.css">
     <style>
+        body {
+            font-family: 'Madimi One', sans-serif; /* Apply the Madimi One font to the entire page */
+            background-image: url('https://media.istockphoto.com/id/538490164/vector/seamless-pattern-with-watercolor-vegetables.jpg?s=612x612&w=0&k=20&c=u2vExHOVe42vCfiyG9YhpNkTaBND116OyjYtpFTlurc='); /* Replace 'your-image-url.jpg' with the URL of your background image */
+            background-size: auto; /* Adjusts the background image size */
+            background-attachment: local; /* Ensures the background image remains fixed as the content scrolls */
+        }
+
         * {
             box-sizing: border-box
         }
@@ -48,23 +55,25 @@
             left: 0;
             border-radius: 3px 0 0 3px;
         }
+
             .prev:hover, .next:hover {
                 background-color: rgba(0,0,0,0.8);
             }
 
         .text {
-            color: #f2f2f2;
-            font-size: 15px;
+            color: dodgerblue;
+            font-size: 30px;
             padding: 8px 12px;
             position: absolute;
+            font-weight: bold;
             bottom: 8px;
             width: 100%;
             text-align: center;
         }
 
         .numbertext {
-            color: #f2f2f2;
-            font-size: 12px;
+            color: dodgerblue;
+            font-size: 20px;
             padding: 8px 12px;
             position: absolute;
             top: 0;
@@ -97,36 +106,51 @@
 <body>
     <div class="text-center">
         <h1 class="madimi-one-regular welcome-paragraph">Welcome To Dish Discovery</h1>
-        <h4 class="madimi-one-regular welcome-paragraph">The best place to find your new best recipe</h4>
-        <p class="madimi-one-regular welcome-paragraph">About Us : We are two teenagers with one week left to prapare our finale project</p>
+        <h2 class="madimi-one-regular welcome-paragraph">The best place to find your new favorite recipe</h2>
+        <h4 class="madimi-one-regular welcome-paragraph">What the creators perefer</h4>
 
         <div class="slideshow-container">
             <div class="mySlides">
-                <div class="numbertext">1 / 5</div>
-                <img src="images/281873.jpg" alt="image" style="width:100%">
-                <div class="text">Caption Text</div>
+                <div class="numbertext">1 / 8</div>
+                <img src="pictures/avocado.webp" alt="image" style="width:100%">
+                <div class="text">Avocado Toast</div>
             </div>
             <div class="mySlides">
-                <div class="numbertext">2 / 5</div>
-                <img src="images/281873.jpg" alt="image" style="width:100%">
-                <div class="text">Caption Text 2</div>
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">3 / 5</div>
-                <img src="images/325_ROG-Prism.jpg" alt="image" style="width:100%">
-                <div class="text">Caption Text 3</div>
+                <div class="numbertext">2 / 8</div>
+                <img src="pictures/shrimp.webp" alt="image" style="width:100%">
+                <div class="text">Lemon Garlic Shrimp</div>
             </div>
 
             <div class="mySlides">
-                <div class="numbertext">4 / 5</div>
-                <img src="images/8-bit City_1920x1080.jpg" alt="image" style="width:100%">
-                <div class="text">Caption Text 4</div>
+                <div class="numbertext">3 / 8</div>
+                <img src="pictures/soup.webp" alt="image" style="width:100%">
+                <div class="text">Lentil Soup</div>
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">4 / 8</div>
+                <img src="pictures/cookies.webp" alt="image" style="width:100%">
+                <div class="text">Chocolate Chip Cookies</div>
             </div>
             <div class="mySlides">
-                <div class="numbertext">5 / 5</div>
-                <img src="images/file.jpg" alt="image" style="width:100%">
-                <div class="text">Caption Text 5</div>
+                <div class="numbertext">5 / 8</div>
+                <img src="pictures/greek_salad.webp" alt="image" style="width:100%">
+                <div class="text">Greek Salad</div>
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">6 / 8</div>
+                <img src="pictures/chips - Copy.webp" alt="image" style="width:100%">
+                <div class="text">Guacamole with Tortilla Chips</div>
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">7 / 8</div>
+                <img src="pictures/chicken.webp" alt="image" style="width:100%">
+                <div class="text">Baked Lemon Herb Chicken</div>
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">8 / 8</div>
+                <img src="pictures/spagheti.webp" alt="image" style="width:100%">
+                <div class="text">Spaghetti Carbonara</div>
             </div>
             <!-- Add more slides here -->
             <!-- Next and previous buttons -->
@@ -141,8 +165,18 @@
             <span class="dot" onclick="currentSlide(3)"></span>
             <span class="dot" onclick="currentSlide(4)"></span>
             <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+
 
         </div>
+        <h1 class="madimi-one-regular welcome-paragraph">About us and the project</h1>
+        <p style="font-size: 20px;">
+            We're building a simple cooking website using ASP.NET Core and a database. Our focus is on usability, not perfection. While our recipes might not be perfect, they're tried and true. We aim to create a friendly space for food lovers to explore and enjoy cooking. Our goal is to make cooking easier for everyone, with a user-friendly website that anyone can use to cook up tasty dishes at home.
+        </p>
+
+
     </div>
 
     <script>

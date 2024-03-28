@@ -1,0 +1,69 @@
+﻿@using Dish_Discovery.Extensions
+@model RecipeFormViewModel<RecipeEditModel>
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+    <link href="~/css/site.css" rel="stylesheet" /> <!-- Link to an external CSS file if needed -->
+    <style>
+        body {
+            font-family: 'Madimi One', sans-serif; /* Apply the Madimi One font to the entire page */
+            background-image: url('https://media.istockphoto.com/id/469839680/vector/vintage-kitchen-tools-pattern.jpg?s=612x612&w=0&k=20&c=fBsq3rbVLT89w6Vr8AI79D9n_hBOFjb-DjLscuSZAlU='); /* Replace 'your-image-url.jpg' with the URL of your background image */
+            background-size: auto; /* Adjusts the background image size to cover the entire body */
+            background-repeat: repeat; /* Prevents the background image from repeating */
+            background-attachment: fixed; /* Ensures background stays fixed while scrolling */
+        }
+    </style>
+</head>
+<body>
+    <h1>Edit</h1>
+    <h4>Recipe</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="InputModel!.Id" />
+                <div class="form-group">
+                    <label asp-for="InputModel!.Name" class="control-label"></label>
+                    <input asp-for="InputModel!.Name" class="form-control" />
+                    <span asp-validation-for="InputModel!.Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="InputModel!.Author" class="control-label"></label>
+                    <select asp-for="InputModel!.Author" asp-items="@Model.Authors.ConstructListItems(a => a.Id.ToString(), a => a.Nickname)" class="form-control"></select>
+                    <span asp-validation-for="InputModel!.Author" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="InputModel!.Types" class="control-label"></label>
+                    <select multiple asp-for="InputModel!.Types" asp-items="@Model.Types.Select(a => new SelectListItem { Value = a.Id.ToString(), Text = a.Name })" class="form-control"></select>
+                    <span asp-validation-for="InputModel!.Types" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    }
+</body>
+</html>
