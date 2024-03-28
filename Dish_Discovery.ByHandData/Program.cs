@@ -82,6 +82,12 @@ namespace Dish_Discovery.ByHandData
             Console.Write("Name: ");
             string name = Console.ReadLine();
 
+            Console.Write("Description: ");
+            string description = Console.ReadLine();   
+            
+            Console.Write("Products: ");
+            string products = Console.ReadLine();
+
             Console.Write("Author ID: ");
             Guid authorId = Guid.Parse(Console.ReadLine());
 
@@ -95,7 +101,7 @@ namespace Dish_Discovery.ByHandData
                 return;
             }
 
-            Recipe recipeToCreate = new Recipe { Name = name, AuthorId = authorId, Types = types };
+            Recipe recipeToCreate = new Recipe { Name = name, Description = description , Products = products , AuthorId = authorId, Types = types };
 
             recipeService.Create(recipeToCreate);
 
@@ -105,7 +111,7 @@ namespace Dish_Discovery.ByHandData
         {
             List<RecipeGeneralInfoProjection> allRecipes = recipeService.GetAll().ToList();
             foreach (var recipe in allRecipes)
-                Console.WriteLine($"{recipe.Id}: \"{recipe.Name}\", {recipe.Author.Nickname}");
+                Console.WriteLine($"{recipe.Id}: \"{recipe.Name}\",{recipe.Description}, {recipe.Products},{recipe.Author.Nickname}");
         }
 
         private static void CreateAuthor(IAuthorService authorService)

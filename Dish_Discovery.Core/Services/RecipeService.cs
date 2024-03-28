@@ -46,6 +46,8 @@ namespace Dish_Discovery.Core.Services
                 {
                     Id = s.Id,
                     Name = s.Name,
+                    Description = s.Description,
+                    Products = s.Products,
                     AuthorId = s.AuthorId,
                     TypeIds = s.Types.Select(g => g.Id)
                 });
@@ -68,6 +70,8 @@ namespace Dish_Discovery.Core.Services
             {
                 Id = s.Id,
                 Name = s.Name,
+                Description = s.Description,
+                Products = s.Products,
                 Author = new AuthorMinifiedProjection
                 {
                     Id = s.Author.Id,

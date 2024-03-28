@@ -12,6 +12,8 @@ namespace Dish_Discovery.Web.ViewModels.Recipes
     {
         public required Guid Id { get; init; }
         public required string Name { get; init; }
+        public required string Description { get; init; }
+        public required string Products { get; init; }
         public required AuthorMinifiedViewModel Author { get; init; }
         public required IEnumerable<TypeMinifiedViewModel> Types { get; init; }
     }

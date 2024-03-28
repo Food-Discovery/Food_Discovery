@@ -40,6 +40,16 @@
                     <span asp-validation-for="InputModel!.Name" class="text-danger"></span>
                 </div>
                 <div class="form-group">
+                    <label asp-for="InputModel!.Products" class="control-label"></label>
+                    <input asp-for="InputModel!.Products" class="form-control" />
+                    <span asp-validation-for="InputModel!.Products" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="InputModel!.Description" class="control-label"></label>
+                    <input asp-for="InputModel!.Description" class="form-control" />
+                    <span asp-validation-for="InputModel!.Description" class="text-danger"></span>
+                </div>
+                <div class="form-group">
                     <label asp-for="InputModel!.Author" class="control-label"></label>
                     <select asp-for="InputModel!.Author" asp-items="@Model.Authors.ConstructListItems(a => a.Id.ToString(), a => a.Nickname)" class="form-control"></select>
                     <span asp-validation-for="InputModel!.Author" class="text-danger"></span>
