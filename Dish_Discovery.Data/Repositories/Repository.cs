@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Dish_Discovery.Data.Repositories
 {
-public class Repository<TEntity> : IRepository<TEntity>
+    public class Repository<TEntity> : IRepository<TEntity>
         where TEntity : class
     {
         private readonly Dish_DbContext _dbContext;

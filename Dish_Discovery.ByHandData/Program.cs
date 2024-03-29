@@ -82,11 +82,20 @@ namespace Dish_Discovery.ByHandData
             Console.Write("Name: ");
             string name = Console.ReadLine();
 
-            Console.Write("Description: ");
-            string description = Console.ReadLine();   
+            Console.Write("Instruction: ");
+            string instruction = Console.ReadLine();   
             
-            Console.Write("Products: ");
-            string products = Console.ReadLine();
+            Console.Write("Ingredients: ");
+            string ingredients = Console.ReadLine();
+
+            Console.Write("Time needed: ");
+            string time = Console.ReadLine();
+
+            Console.Write("Servings: ");
+            int servings = int.Parse(Console.ReadLine());
+
+            Console.Write("Calories: ");
+            string calories = Console.ReadLine();
 
             Console.Write("Author ID: ");
             Guid authorId = Guid.Parse(Console.ReadLine());
@@ -101,7 +110,7 @@ namespace Dish_Discovery.ByHandData
                 return;
             }
 
-            Recipe recipeToCreate = new Recipe { Name = name, Description = description , Products = products , AuthorId = authorId, Types = types };
+            Recipe recipeToCreate = new Recipe { Name = name, Instruction = instruction , Ingredients = ingredients , Time = time , Servings = servings , Calories = calories , AuthorId = authorId, Types = types };
 
             recipeService.Create(recipeToCreate);
 
@@ -111,7 +120,7 @@ namespace Dish_Discovery.ByHandData
         {
             List<RecipeGeneralInfoProjection> allRecipes = recipeService.GetAll().ToList();
             foreach (var recipe in allRecipes)
-                Console.WriteLine($"{recipe.Id}: \"{recipe.Name}\",{recipe.Description}, {recipe.Products},{recipe.Author.Nickname}");
+                Console.WriteLine($"{recipe.Id}: \"{recipe.Name}\",{recipe.Instruction}, {recipe.Ingredients}, {recipe.Time}, {recipe.Servings}, {recipe.Calories}, {recipe.Author.Nickname}");
         }
 
         private static void CreateAuthor(IAuthorService authorService)

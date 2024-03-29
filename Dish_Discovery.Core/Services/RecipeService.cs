@@ -46,8 +46,11 @@ namespace Dish_Discovery.Core.Services
                 {
                     Id = s.Id,
                     Name = s.Name,
-                    Description = s.Description,
-                    Products = s.Products,
+                    Instruction = s.Instruction,
+                    Ingredients = s.Ingredients,
+                    Time = s.Time,
+                    Servings = s.Servings.ToString(),
+                    Calories = s.Calories,
                     AuthorId = s.AuthorId,
                     TypeIds = s.Types.Select(g => g.Id)
                 });
@@ -70,8 +73,11 @@ namespace Dish_Discovery.Core.Services
             {
                 Id = s.Id,
                 Name = s.Name,
-                Description = s.Description,
-                Products = s.Products,
+                Instruction = s.Instruction,
+                Ingredients = s.Ingredients,
+                Time = s.Time,
+                Servings = s.Servings.ToString(),
+                Calories = s.Calories,
                 Author = new AuthorMinifiedProjection
                 {
                     Id = s.Author.Id,

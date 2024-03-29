@@ -51,7 +51,15 @@ namespace Dish_Discovery.Data.Migrations
                     b.Property<Guid>("AuthorId")
                         .HasColumnType("char(36)");
 
-                    b.Property<string>("Description")
+                    b.Property<string>("Calories")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Ingredients")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Instruction")
                         .IsRequired()
                         .HasColumnType("longtext");
 
@@ -59,7 +67,10 @@ namespace Dish_Discovery.Data.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("Products")
+                    b.Property<int>("Servings")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Time")
                         .IsRequired()
                         .HasColumnType("longtext");
 

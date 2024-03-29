@@ -12,8 +12,11 @@ namespace Dish_Discovery.Core.Projections.Recipes
     {
         public required Guid Id { get; init; }
         public required string Name { get; init; }
-        public required string Description { get; init; }
-        public required string Products { get; init; }
+        public required string Instruction { get; init; }
+        public required string Ingredients { get; init; }
+        public required string Time { get; init; }
+        public required string Servings { get; init; }
+        public required string Calories { get; init; }
         public required AuthorMinifiedProjection Author { get; init; }
         public required IEnumerable<TypeMinifiedProjection> Types { get; init; }
 

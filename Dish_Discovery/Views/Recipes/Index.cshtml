@@ -25,21 +25,33 @@
 </head>
 <body>
     <div>
-        <h1>Recipes</h1>
+        <h1>Recipes🍴</h1> 
         <p>
-            <a asp-action="Create">Create New</a>
+            <a asp-action="Create">Create New </a> <span style="color: orange;">➕</span>
         </p>
         <table class="table">
             <thead>
                 <tr>
                     <th>
-                        @Html.DisplayNameFor(model => model.Name)
+                        @Html.DisplayNameFor(model => model.Name)  <span style="color: orange;">🍽️</span>
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.Author)
+                        @Html.DisplayNameFor(model => model.Author)  <span style="color: orange;">🧑🏻‍🍳</span>
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.Types)
+                        @Html.DisplayNameFor(model => model.Types) <span style="color: orange;">🌇🌆🌃</span>
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Time) needed <span style="color: orange;">⏳</span>
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Servings) <span style="color: orange;">🍱</span>
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Calories) per Serving <span style="color: orange;">🔥</span>
+                    </th>
+                    <th>
+                        Actions <span style="color: orange;">⚡</span> 
                     </th>
                     <th></th>
                 </tr>
@@ -61,6 +73,15 @@
                                     <a asp-controller="Types" asp-action="Details" asp-route-id="@genre.Id">@genre.Name</a>
                                 </div>
                             }
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => viewModel.Time)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => viewModel.Servings)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => viewModel.Calories)
                         </td>
                         <td>
                             <a asp-action="Edit" asp-route-id="@viewModel.Id">Edit</a> |
