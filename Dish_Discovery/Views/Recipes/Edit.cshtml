@@ -35,42 +35,42 @@
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <input type="hidden" asp-for="InputModel!.Id" />
                 <div class="form-group">
-                    <label asp-for="InputModel!.Name" class="control-label"></label>
+                    <label asp-for="InputModel!.Name" class="control-label"></label> <span style="color: orange;">🍽️</span>
                     <input asp-for="InputModel!.Name" class="form-control" />
                     <span asp-validation-for="InputModel!.Name" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label asp-for="InputModel!.Ingredients" class="control-label"></label>
+                    <label asp-for="InputModel!.Ingredients" class="control-label"></label> <span style="color: orange;">🥩</span>
                     <input asp-for="InputModel!.Ingredients" class="form-control" />
                     <span asp-validation-for="InputModel!.Ingredients" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label asp-for="InputModel!.Instruction" class="control-label"></label>
+                    <label asp-for="InputModel!.Instruction" class="control-label"></label> <span style="color: orange;">📋</span>
                     <input asp-for="InputModel!.Instruction" class="form-control" />
                     <span asp-validation-for="InputModel!.Instruction" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label asp-for="InputModel!.Time" class="control-label"></label>
+                    <label asp-for="InputModel!.Time" class="control-label"></label> <span style="color: orange;">⏳</span>
                     <input asp-for="InputModel!.Time" class="form-control" />
                     <span asp-validation-for="InputModel!.Time" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label asp-for="InputModel!.Servings" class="control-label"></label>
+                    <label asp-for="InputModel!.Servings" class="control-label"></label> <span style="color: orange;">🍱</span>
                     <input asp-for="InputModel!.Servings" class="form-control" />
                     <span asp-validation-for="InputModel!.Servings" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label asp-for="InputModel!.Calories" class="control-label"></label>
+                    <label asp-for="InputModel!.Calories" class="control-label"></label> per Serving  <span style="color: orange;">🔥</span>
                     <input asp-for="InputModel!.Calories" class="form-control" />
                     <span asp-validation-for="InputModel!.Calories" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label asp-for="InputModel!.Author" class="control-label"></label>
+                    <label asp-for="InputModel!.Author" class="control-label"></label> <span style="color: orange;">🧑🏻‍🍳</span>
                     <select asp-for="InputModel!.Author" asp-items="@Model.Authors.ConstructListItems(a => a.Id.ToString(), a => a.Nickname)" class="form-control"></select>
                     <span asp-validation-for="InputModel!.Author" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label asp-for="InputModel!.Types" class="control-label"></label>
+                    <label asp-for="InputModel!.Types" class="control-label"></label> <span style="color: orange;">🌇🌆🌃</span>
                     <select multiple asp-for="InputModel!.Types" asp-items="@Model.Types.Select(a => new SelectListItem { Value = a.Id.ToString(), Text = a.Name })" class="form-control"></select>
                     <span asp-validation-for="InputModel!.Types" class="text-danger"></span>
                 </div>

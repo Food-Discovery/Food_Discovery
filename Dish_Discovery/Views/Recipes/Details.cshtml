@@ -32,60 +32,60 @@
         <hr />
         <dl class="row">
             <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Id)
+                @Html.DisplayNameFor(model => model.Id) <span style="color: orange;">💳</span>
             </dt>
             <dd class="col-sm-10">
                 @Html.DisplayFor(model => model.Id)
             </dd>
 
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Name)
+            <dt class="col-sm-2"> 
+                @Html.DisplayNameFor(model => model.Name) <span style="color: orange;">🍽️</span>
             </dt>
             <dd class="col-sm-10">
                 @Html.DisplayFor(model => model.Name)
             </dd>
             <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Ingredients)
+                @Html.DisplayNameFor(model => model.Ingredients) <span style="color: orange;">🥩</span>
             </dt>
             <dd class="col-sm-10">
                 @Html.DisplayFor(model => model.Ingredients)
             </dd>
 
             <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Instruction)
+                @Html.DisplayNameFor(model => model.Instruction) <span style="color: orange;">📋</span>
             </dt>
             <dd class="col-sm-10">
                 @Html.DisplayFor(model => model.Instruction)
             </dd>
             <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Time)
+                @Html.DisplayNameFor(model => model.Time) needed <span style="color: orange;">⏳</span>
             </dt>
             <dd class="col-sm-10">
                 @Html.DisplayFor(model => model.Time)
             </dd>
 
             <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Servings)
+                @Html.DisplayNameFor(model => model.Servings) <span style="color: orange;">🍱</span>
             </dt>
             <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Servings)
+                @Html.DisplayFor(model => model.Servings) 
             </dd>
             <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Calories)
+                @Html.DisplayNameFor(model => model.Calories) per Serving <span style="color: orange;">🔥</span>
             </dt>
             <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Calories)
+                @Html.DisplayFor(model => model.Calories) 
             </dd>
 
             <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Author.Nickname)
+                @Html.DisplayNameFor(model => model.Author.Nickname) <span style="color: orange;">🧑🏻‍🍳</span>
             </dt>
             <dd class="col-sm-10">
                 <a asp-controller="Author" asp-action="Details" asp-route-id="@Model.Author.Id">@Model.Author.Nickname</a>
             </dd>
 
             <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Types)
+                @Html.DisplayNameFor(model => model.Types) <span style="color: orange;">🌇🌆🌃</span>
             </dt>
             <dd class="col-sm-10">
                 @foreach (var genre in Model.Types)

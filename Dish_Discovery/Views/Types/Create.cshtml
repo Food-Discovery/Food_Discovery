@@ -28,7 +28,7 @@
     </style>
 </head>
 <body>
-    <h1>Create</h1>
+    <h1>Create <span style="color: orange;">✍</span></h1>
 
     <h4>Type</h4>
     <hr />
@@ -37,7 +37,7 @@
             <form asp-action="Create">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-group">
-                    <label asp-for="Name" class="control-label"></label>
+                    <label asp-for="Name" class="control-label"></label> <span style="color: orange;">🍽️</span>
                     <input asp-for="Name" class="form-control" />
                     <span asp-validation-for="Name" class="text-danger"></span>
                 </div>
