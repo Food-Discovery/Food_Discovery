@@ -14,10 +14,10 @@
     <link rel="stylesheet" href="~/css//site.css">
     <style>
         body {
-            font-family: 'Madimi One', sans-serif; /* Apply the Madimi One font to the entire page */
+            font-family: 'Madimi One', sans-serif;
             background-image: url('https://media.istockphoto.com/id/538490164/vector/seamless-pattern-with-watercolor-vegetables.jpg?s=612x612&w=0&k=20&c=u2vExHOVe42vCfiyG9YhpNkTaBND116OyjYtpFTlurc='); /* Replace 'your-image-url.jpg' with the URL of your background image */
-            background-size: auto; /* Adjusts the background image size */
-            background-attachment: local; /* Ensures the background image remains fixed as the content scrolls */
+            background-size: auto; 
+            background-attachment: local;
         }
 
         * {
@@ -114,7 +114,7 @@
                 <div class="numbertext">1 / 8</div>
                 <img src="pictures/avocado (Small).jpeg" alt="image" style="width:100%">
                 <div class="text">
-                    <a href="https://localhost:7106/recipes/details?id=5ed39b0a-cf73-4425-8f31-2cf799f98097" style="text-decoration: none; color: inherit;">Avocado Toast</a>
+                    <a href="https://localhost:7106/recipes/details?id=141fb843-0d91-4437-b6f6-cae4b989f423" style="text-decoration: none; color: inherit;">Avocado Toast</a>
                 </div>
             </div>
             <div class="mySlides" style="border: 3px solid black; padding: 0px;">
@@ -222,12 +222,10 @@
         let slideIndex = 1;
         showSlides(slideIndex);
 
-        // Next/previous controls
         function plusSlides(n) {
             showSlides(slideIndex += n);
         }
 
-        // Thumbnail image controls
         function currentSlide(n) {
             showSlides(slideIndex = n);
         }
